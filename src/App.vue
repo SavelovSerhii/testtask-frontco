@@ -1,6 +1,6 @@
 <script setup>
   import { onMounted, ref } from 'vue'
-  import TheWelcome from './components/TheWelcome.vue';
+  import TheCarousel from './components/TheCarousel.vue';
 
   const imageList = ref([]);
   const urlList = ref([]);
@@ -36,7 +36,7 @@
 
 <template>
   <main>
-    <TheWelcome :image-list="imageList" :scroll-left="scrollLeft" :scroll-right="scrollRight" :select-image="selectImage" />
+    <TheCarousel :image-list="imageList" :scroll-left="scrollLeft" :scroll-right="scrollRight" :select-image="selectImage" />
 
     <ul v-if="urlList.length" class="url__list">
       <li class="url__item" v-for="url in urlList" :key="url">
